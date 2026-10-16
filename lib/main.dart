@@ -61,7 +61,7 @@ class DirectoryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorSchemeSeed: Colors.blue, // TODO: pick your own seed color + comment
+        colorSchemeSeed: Colors.teal, // customization 1: theme seed color
         useMaterial3: true,
       ),
       home: const DirectoryScreen(),
