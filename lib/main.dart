@@ -45,10 +45,10 @@ const List<Student> students = [
     email: 'bob.johnson@csucc.edu.ph',
   ),
     Student(
-    name: 'Your Own Name Here',
+    name: 'Maria Santos',
     course: 'BSIT',
     yearLevel: 2,
-    email: 'name@csucc.edu.ph',
+    email: 'maria.santos@csucc.edu.ph',
   ),
 ];
 
@@ -71,6 +71,7 @@ class DirectoryApp extends StatelessWidget {
 
 
 // ---------- Screen ----------
+// Stateless because the list it shows is hard-coded and never changes.
 class DirectoryScreen extends StatelessWidget {
   const DirectoryScreen({super.key});
 
@@ -88,8 +89,6 @@ class DirectoryScreen extends StatelessWidget {
   }
 }
 
-// ---------- Section header ----------
-// Stateless because it only displays the title it receives.
 // ---------- Section header ----------
 // Stateless because it only displays the title it receives.
 class SectionHeader extends StatelessWidget {
@@ -121,8 +120,6 @@ class SectionHeader extends StatelessWidget {
 
 // ---------- Info row ----------
 // Stateless because it only displays the icon and text it receives.
-// ---------- Info row ----------
-// Stateless because it only displays the icon and text it receives.
 class InfoRow extends StatelessWidget {
   final IconData icon;
   final String text;
@@ -151,12 +148,17 @@ class StudentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), // customization 2: rounded card corners
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Row(
           children: [
-            CircleAvatar(child: Text(student.name[0])),
+           CircleAvatar(
+              backgroundColor: Colors.teal, // customization 3: avatar color
+              foregroundColor: Colors.white,
+              child: Text(student.name[0]),
+            ),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
