@@ -17,13 +17,13 @@ class Student {
     required this.email,
   });
 }
-// ---------- Screen ----------
-// TODO: add at least 4 more students (5 or more in total), your own made-up data
+
+
 const List<Student> students = [
   Student(
     name: 'Ronel Silvosa',
     course: 'BSIT',
-    yearLevel: 3,
+    yearLevel: 2,
     email: 'Ronel.silvosa@csucc.edu.ph',
   ),
   Student(
@@ -43,6 +43,12 @@ const List<Student> students = [
     course: 'BSECE',
     yearLevel: 4,
     email: 'bob.johnson@csucc.edu.ph',
+  ),
+    Student(
+    name: 'Your Own Name Here',
+    course: 'BSIT',
+    yearLevel: 2,
+    email: 'name@csucc.edu.ph',
   ),
 ];
 
